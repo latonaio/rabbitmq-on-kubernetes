@@ -2,7 +2,7 @@
 
 ## 概要  
 
-RabbitMQ を設定し、Kubernetes上 の pod として動かすための、初期化スクリプト と deployment.yml です。
+rabbitmq-on-kubernetes は、RabbitMQ を設定し、Kubernetes上 の pod として動かすために必要な、初期化スクリプト と deployment.yml です。
 
 
 ## RabbitMQ の初期設定  
@@ -109,7 +109,7 @@ spec:
 
 ### Kubernetes 内から
 
-`amqp://[ユーザ名]:[パスワード]@rabbitmq:5672/[バーチャルホスト名]` で接続できます。  
+`amqp://[ユーザ名]:[パスワード]@rabbitmq:5672/[バーチャルホスト名]` で接続できます。   
 
 
 ### 外部のホストから
