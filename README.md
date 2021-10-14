@@ -32,7 +32,8 @@ RabbitMQ を設定し、Kubernetes上 の pod として動かすための、初�
 
 
 ## AION における RabbitMQ のデプロイ・稼働  
-aion-core-manifestsの template/bases/rabbitmq の deployment.yml に RabbitMQ をデプロイ・稼働させるために必要なyamlファイルが配置されています。  
+[aion-core-manifests](https://github.com/latonaio/aion-core-manifests)の template/bases/rabbitmq の deployment.yml に RabbitMQ をデプロイ・稼働させるために必要なyamlファイルが配置されています。    
+
 ymlファイル（deployment.yml）の中身  
 ```
 apiVersion: apps/v1
