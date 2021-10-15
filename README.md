@@ -31,8 +31,8 @@ rabbitmq-on-kubernetes は、RabbitMQ を設定し、Kubernetes上 の pod と�
 特に問題がない場合、導入時点での最新版 RabbitMQ のご利用をおすすめします。[こちら](https://rabbitmq.com/download.html)で最新バージョンを確認できます。
 
 
-## AION における RabbitMQ のデプロイ・稼働  
-[aion-core-manifests](https://github.com/latonaio/aion-core-manifests)の template/bases/rabbitmq の deployment.yml に RabbitMQ をデプロイ・稼働させるために必要なyamlファイルが配置されています。    
+## RabbitMQ のデプロイ・稼働  
+[aion-core-manifests](https://github.com/latonaio/aion-core-manifests)の template/bases/rabbitmq の deployment.yml に RabbitMQ をデプロイするために必要なyamlファイルが配置されています。    
 
 ymlファイル（deployment.yml）の中身  
 ```
