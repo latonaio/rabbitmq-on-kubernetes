@@ -4,6 +4,8 @@
 
 rabbitmq-on-kubernetes は、RabbitMQ を設定し、Kubernetes上 の pod として動かすために必要な、初期化スクリプト と deployment.yml です。
 
+# rabbitmq-on-kubernetes を使用したエッジコンピューティングアーキテクチャの一例  
+![フローチャート図](doc/omotebako_architecture_20211016.drawio.png)  
 
 ## RabbitMQ の初期設定  
 
