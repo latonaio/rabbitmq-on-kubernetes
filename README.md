@@ -149,17 +149,17 @@ async def main():
     # RabbitMQの接続情報
     rabbitmq_url = os.environ['RABBITMQ_URL']
     # キューの読み込み元
-    queue_from = os.environ['QUEUE_FROM']
+    queue_origin = os.environ['QUEUE_ORIGIN']
     # キューの書き込み先
     queue_to = os.environ['QUEUE_TO']
 
     try:
-        mq_client = await RabbitmqClient.create(rabbitmq_url, {queue_from}, {queue_to})
+        mq_client = await RabbitmqClient.create(rabbitmq_url, {queue_origin}, {queue_to})
     except Exception as e:
         logger.error({
             'message': 'failed to connect rabbitmq!',
             'error': str(e),
-            'queue_from': queue_from,
+            'queue_origin': queue_origin,
             'queue_to': queue_to,
         })
         # 本来 sys.exit を使うべきだが、効かないので
@@ -222,8 +222,8 @@ if __name__ == '__main__':
 
 ## マイクロサービスにおける RabbitMQ の Kubernetes yml 設定ファイル    
 AION では、マイクロサービス毎に、RabbitMQ に関する Kubernetes ymlファイルの内容を 定義する必要があります。  
-当該 yml ファイルでは、QUEUE を受け取るマイクロサービスの名前(QUEUE_FROM)、QUEUE を送信するマイクロサービスの名前(QUEUE_TO)を記述します。  
-QUEUE_FROM、QUEUE_TOは、それぞれ複数、定義することができます。  
+当該 yml ファイルでは、QUEUE の生成マイクロサービスの名前(=自マイクロサービス自身、QUEUE_ORIGIN)、QUEUE を送信するマイクロサービスの名前(QUEUE_TO)を記述します。  
+QUEUE_TO は複数、定義することができます。  
 例えば、azure-face-api-registrator-kube の services.yml において、次のように書かれています。  
 ```
 azure-face-api-registrator-kube:
@@ -232,6 +232,6 @@ azure-face-api-registrator-kube:
   scale: 1
   env:
     RABBITMQ_URL: amqp://guest:guest@rabbitmq:5672/xxxxxxxx
-    QUEUE_FROM: azure-face-api-registrator-kube-queue
+    QUEUE_ORIGIN: azure-face-api-registrator-kube-queue
     QUEUE_TO: register-face-to-guest-table-kube-queue
 ```
