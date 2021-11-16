@@ -1,6 +1,6 @@
 # fluentd-for-avis
 
-fluentd-for-avis は、収集されたログを [avis](https://github.com/latonaio/avis) データ収集用の RabbitMQ のキューに保存するリソースです。
+fluentd-for-avis は、収集されたログを [avis](https://github.com/latonaio/avis) データ収集用の RabbitMQ のキューに保存するリソースです。  
 fluentd を動かすためには、fluentd-for-avis の他に、下記のようなレポジトリを参照して、設定を行う必要があります。  
 
 * fluentd-for-docker-containers  
