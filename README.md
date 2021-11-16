@@ -57,9 +57,9 @@ avis-client-kube-queue
     
 ##### エッジクラスター外部用キューの例  
       
-* send-data-to-azure-iot-hub-queue  
-* slack-message-client-kube-queue  
-* avis-client-kube-queue  
+* send-data-to-azure-iot-hub-queue：エッジ側からAzure IoT Hubにメッセージを送信するためのキュー
+* slack-message-client-kube-queue：エッジ側からSlackにメッセージを送信するためのキュー
+* avis-client-kube-queue：Avis のデータ収集元として、エッジ端末等内においてデータを維持するためのキュー （※Avis については、[avis](https://github.com/latonaio/avis)、[avis-electron](https://github.com/latonaio/avis-electron) を参照してください）
 
 ## RabbitMQ の導入  
 
