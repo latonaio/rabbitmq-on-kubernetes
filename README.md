@@ -31,6 +31,36 @@ AION において、RabbitMQ は、以下の領域で、それぞれの役割を
 * バーチャルホストの新規作成
 * キューの作成
 
+### サンプルのキュー定義  
+サンプルのキュー定義として、init-queues.shに以下のキュー名一覧が記載されています。  
+```
+# キュー名一覧
+queues=(
+azure-face-api-identifier-kube-queue
+azure-face-api-registrator-kube-queue
+get-response-of-face-api-kube-queue
+register-face-to-guest-table-kube-queue
+send-data-to-azure-iot-hub-queue
+slack-message-client-kube-queue
+avis-client-kube-queue
+)
+```
+
+サンプルのキュー定義のうち、エッジクラスター（1エッジ端末内を含む）内部用のキューとエッジクラスター外部用のキューを分類すると、以下のようになります。   
+
+##### エッジクラスター内部用キューの例  
+
+* azure-face-api-identifier-kube-queue  
+* azure-face-api-registrator-kube-queue  
+* get-response-of-face-api-kube-queue  
+* register-face-to-guest-table-kube-queue  
+    
+##### エッジクラスター外部用キューの例  
+      
+* send-data-to-azure-iot-hub-queue  
+* slack-message-client-kube-queue  
+* avis-client-kube-queue  
+
 ## RabbitMQ の導入  
 
 `kubectl apply -f deployment.yml` コマンドを利用してください。

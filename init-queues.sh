@@ -11,12 +11,17 @@ user=sample_user
 passwd=sample_pass
 
 # バーチャルホスト名
-vhost=sample_vhost
+vhost=sample_host
 
 # キュー名一覧
 queues=(
-	sample-queue-1
-	sample-queue-2
+	azure-face-api-identifier-kube-queue
+	azure-face-api-registrator-kube-queue
+	get-response-of-face-api-kube-queue
+	register-face-to-guest-table-kube-queue
+	send-data-to-azure-iot-hub-queue
+	slack-message-client-kube-queue
+	avis-client-kube-queue
 )
 
 
@@ -60,3 +65,4 @@ rabbitmqadmin declare vhost name="$vhost"
 for queue in "${queues[@]}"; do
 	rabbitmqadmin declare queue --vhost="$vhost" name="$queue" durable=true
 done
+
