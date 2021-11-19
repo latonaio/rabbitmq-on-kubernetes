@@ -20,7 +20,7 @@ AION において、RabbitMQ は、以下の領域で、それぞれの役割を
 ## rabbitmq-on-kubernetesにおけるAI/IoT環境のためのデータパイプライン    
 下記の図は、AIONプラットフォームにおけるAI/IoT環境のためのデータパイプラインのアーキテクチャです。   
 rabbitmq-on-kubernetes は、AI/IoT環境のデータパイプラインのコアとして、マイクロサービス間のメッセージング処理を担います。  
-各マイクロサービスに対して、aion-service-definisions で定義された RabbitMQ のための設定をすることで、当該マイクロサービスはメタデータや処理結果のJSON等の RabbitMQ への受け渡しを行います。  
+各マイクロサービスとRabbitMQ間における、メタデータや処理結果のJSON等の受け渡しは、当該マイクロサービスに対して、aion-service-definisions で定義された RabbitMQ のための設定をすることで行われます。  
 データパイプラインにおけるマイクロサービス化された RabbitMQ は、他のコンポーネントと疎結合されており、軽量なメッセージングアーキテクチャとして、AI / IoT ランタイムの I/Oに対して高速で安定的なシステム環境の構築を実現します。 
 
 ![data-pipeline](doc/data_pipeline.drawio.png)  
