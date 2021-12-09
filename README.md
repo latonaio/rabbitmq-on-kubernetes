@@ -108,7 +108,7 @@ spec:
       containers:
       - name: rabbitmq
         tty: true
-        image: rabbitmq:3.9.9-management-alpine
+        image: rabbitmq:3.9.11-management-alpine
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5672
