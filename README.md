@@ -173,7 +173,8 @@ AION において RabbitMQ を正しく動作させるには、本レポジト�
 * [rabbitmq-golang-client](https://github.com/latonaio/rabbitmq-golang-client)
 * [rabbitmq-nodejs-client](https://github.com/latonaio/rabbitmq-nodejs-client)
 * [rabbitmq-python-client](https://github.com/latonaio/rabbitmq-python-client)
-
+* [rabbitmq-c-client](https://github.com/latonaio/rabbitmq-c-client)
+* 
 ## マイクロサービスにおける RabbitMQ との 疎通 のための Main ソースコードの書き方  
 AIONでは、マイクロサービスにおける RabbitMQ との 疎通を、マイクロサービス の Main ソースコードに書く必要があります。  
 マイクロサービスにおける RabbitMQ との 疎通のための Main ソースコード の書き方 の サンプルとして、例えば、azure-face-api-registrator-kube の main.py において、次のように書かれています。  
